@@ -18,7 +18,8 @@ st.title("🌍 World Happiness Dashboard")
 st.caption("Source: World Happiness Report 2023 | Kaggle")
 
 # Data Ingestion
-df = pd.read_csv('···/data/world_happiness_2023.csv')
+DATA = Path(__file__).parent.parent / "data" / "world_happiness_2023.csv"
+df = pd.read_csv(DATA)
 
 df.columns = ['Country','Region','Score','GDP','Social_Support',
               'Life_Expectancy','Freedom','Generosity','Corruption']
