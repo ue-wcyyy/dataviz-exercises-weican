@@ -6,7 +6,8 @@ st.set_page_config(page_title="Happiness vs Corruption", page_icon="🌐", layou
 st.title("🌍 Happiness Score vs Perception of Corruption")
 st.markdown("Class Exercise: Diverging Continuous Color Scale Chart")
 
-df = pd.read_csv('../data/world_happiness_2023.csv')
+DATA = Path(__file__).parent.parent / "data" / "world_happiness_2023.csv"
+df = pd.read_csv(DATA)
 
 midpoint_val = df['Corruption'].median()
 
