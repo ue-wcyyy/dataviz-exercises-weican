@@ -8,7 +8,7 @@ st.title("🌍 Happiness Score vs Perception of Corruption")
 st.markdown("Class Exercise: Diverging Continuous Color Scale Chart")
 
 DATA = Path(__file__).parent.parent / "data" / "world_happiness_2023.csv"
-df = pd.read_csv(DATA)
+df['Corruption'] = pd.read_csv(DATA)
 
 midpoint_val = df['Corruption'].median()
 
